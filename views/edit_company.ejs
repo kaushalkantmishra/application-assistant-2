@@ -1,0 +1,31 @@
+<!-- edit_company.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Company</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <%- include('navbar.ejs') %>
+    <div class="edit-company-container">
+        <h2 class="edit-company-title">Edit Company</h2>
+        <form class="edit-company-form" method="POST" action="/company/<%= company._id %>?_method=PUT">
+            <label for="company_name">Company Name:</label>
+            <input type="text" id="company_name" name="company_name" value="<%= company.company_name %>" required>
+        
+            <label for="expected_date">Expected Date:</label>
+            <input type="date" id="expected_date" name="expected_date" value="<%= company.expected_date %>" required>
+
+            <label for="company_url">Company URL:</label>
+            <input type="text" id="company_url" name="company_url" value="<%= company.company_url %>" required />
+        
+            <button type="submit">Save Changes</button>
+        </form>
+        <a href="/company" class="go-back-link">Go back to company table</a>
+    </div>
+</body>
+</html>

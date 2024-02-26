@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Table</title>
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('navbar.ejs') %>
+    <h2>Company Table</h2>
+
+    <!-- Form to add a new company -->
+    <div class="company">
+      <form method="POST" action="/company">
+        <label for="company_name">Company Name:</label>
+        <input type="text" id="company_name" name="company_name" required />
+
+        <label for="expected_date">Expected Date:</label>
+        <input type="date" id="expected_date" name="expected_date" required />
+        <label for="company_url">Company URL:</label>
+        <input type="text" id="company_url" name="company_url" required />
+
+        <button type="submit">Add Company</button>
+      </form>
+    </div>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Company Name</th>
+        <th>Expected Date</th>
+        <th>Company URL</th>
+        <th>Action</th>
+      </tr>
+      <% companies.forEach(company => { %>
+      <tr>
+        <td><%= company._id %></td>
+        <td><%= company.company_name %></td>
+        <td><%= company.expected_date %></td>
+        <td>
+            <!-- Check if company_url exists before rendering link -->
+            <% if (company.company_url) { %>
+              <a href="<%= company.company_url %>" target="_blank"><%= company.company_url %></a>
+            <% } else { %>
+              N/A
+            <% } %>
+          </td>
+        <td>
+          <!-- Form for deleting a company -->
+          <form
+            method="POST"
+            action="/company/<%= company.id %>?_method=DELETE"
+          >
+            <button type="submit">Delete</button>
+          </form>
+          <a href="/company/edit/<%= company._id %>">Edit</a>
+        </td>
+      </tr>
+      <% }); %>
+    </table>
+    <a class="comlink" href="/">Go back to home page</a>
+  </body>
+</html>

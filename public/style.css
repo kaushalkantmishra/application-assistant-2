@@ -1,0 +1,612 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(146, 215, 239);
+    background-image: url("https://images.unsplash.com/photo-1526666923127-b2970f64b422?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+  
+  /* General Styles */
+  h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Login Form Styles */
+  .login {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+  
+  .login h2 {
+    text-align: center;
+    color: #ffffff;
+    background-color: #000000;
+    margin-bottom: 20px;
+    margin-top: 0%;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .login form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login label {
+    margin-bottom: 8px;
+    margin-left: 10px;
+    color: #555;
+  }
+  
+  .login input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+  }
+  
+  .login button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login button:hover {
+    background-color: #0056b3;
+  }
+  
+  .login p {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+  }
+  
+  .login a {
+    color: #0a0a0a;
+    text-decoration: none;
+  }
+  
+  .login a:hover {
+    text-decoration: underline;
+    color: #b30000;
+  }
+  
+  /* Registration Form Styles */
+  .registration {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+  
+  .registration h2 {
+    text-align: center;
+    color: #ffffff;
+    background-color: #0026ff;
+    margin-bottom: 20px;
+    margin-top: 0%;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .registration form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .registration label {
+    margin-bottom: 8px;
+    color: #555;
+    margin-left: 10px;
+  }
+  
+  .registration input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+  }
+  
+  .registration button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .registration button:hover {
+    background-color: #218838;
+  }
+  
+  .registration p {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+  }
+  
+  .registration a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .registration a:hover {
+    text-decoration: underline;
+    color: #b31b00;
+  }
+  
+  /* Home Section Styles */
+  .home {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+  }
+  
+  b {
+    color: brown;
+  }
+  
+  p {
+    margin-top: 10px;
+    text-align: justify;
+  }
+  
+  .hbtn {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hbtn:hover {
+    background-color: #ca0707;
+  }
+  
+  /* Table Styles */
+  table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #f5f5f5;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .fbtn {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    max-width: 300px;
+  }
+  
+  button {
+    background-color: #000000;
+    color: white;
+    padding: 6px 8px;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #bc0303;
+  }
+  
+  /* Company Section Styles */
+  .company {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .company form {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .company label {
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  
+  .company input {
+    padding: 3px;
+    margin-right: 20px;
+  }
+  
+  .company button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .company button:hover {
+    background-color: #218838;
+  }
+  
+  a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #ca0707;
+  }
+  
+  .comlink {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Applied Section Styles */
+  .applied {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .applied form {
+    width: 300px;
+  }
+  
+  .applied label {
+    display: block;
+    margin-bottom: 5px;
+    color: #0056b3;
+  }
+  
+  .applied input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+  }
+  
+  .applied-head {
+    background-color: #60e08d;
+    color: #333;
+    padding: 10px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 35%;
+    margin-right: 35%;
+    border-radius: 14px;
+  }
+  
+  .applied-head h2 {
+    background-color: #000000;
+    color: #ffffff;
+    margin-top: 0%;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  /* Submit Button Styles */
+  .btn1 {
+    background-color: #070a07;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-left: 42%;
+  }
+  
+  .btn1:hover {
+    background-color: #45a049;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar img {
+    height: 50px;
+    width: auto;
+    background-color: transparent;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    text-align: center;
+  }
+  
+  .navbar-links li {
+    margin-right: 20px;
+  }
+  
+  .navbar a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Edit User Form Styles */
+  .edit-user-container {
+    background-color: #60e08d;
+    color: #333;
+    padding: 30px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 14px;
+  }
+  
+  .edit-user-title {
+    text-align: center;
+    color: #eeeeee;
+    background-color: #000000;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 0%;
+  }
+  
+  .edit-user-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .edit-user-form label {
+    margin-bottom: 8px;
+    margin-left: 10px;
+    color: #1843cf;
+    font-size: large;
+  }
+  
+  .edit-user-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .save-changes-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 150px;
+    margin-left: 150px;
+  }
+  
+  .save-changes-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .go-back-link {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    color: #060606;
+    text-decoration: none;
+  }
+  
+  .go-back-link:hover {
+    text-decoration: underline;
+    color: #b30600;
+  }
+  /* Edit Company Styles */
+  .edit-company-container {
+    text-align: center;
+    margin-top: 50px;
+    background-color: #60e08d;
+    border-radius: 14px;
+    padding: 5px;
+    margin-left: 35%;
+    margin-right: 35%;
+  }
+  
+  .edit-company-title {
+    text-align: center;
+    color: #eeeeee;
+    background-color: #000000;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .edit-company-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .edit-company-form label {
+    margin-bottom: 8px;
+    margin-left: 10px;
+    color: #0a0a0a;
+  }
+  
+  .edit-company-form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+  }
+  
+  .go-back-link {
+    display: block;
+    margin-top: 20px;
+    color: #020202;
+    text-decoration: none;
+  }
+  
+  .go-back-link:hover {
+    text-decoration: underline;
+    color: #b31e00;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    body {
+      background-size: auto;
+    }
+  
+    .login,
+    .registration,
+    .home,
+    .company,
+    .applied,
+    .edit-user-container,
+    .edit-company-container {
+      margin: 5%;
+    }
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar-links {
+      margin-top: 10px;
+    }
+  
+    .navbar-links li {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .navbar a:hover {
+      color: #ffcc00;
+    }
+  
+    .navbar img {
+      margin-bottom: 10px;
+    }
+  
+  }
+  @media only screen and (max-width: 350px) {
+    body {
+      background-size: auto;
+    }
+  
+    .login,
+    .registration,
+    .home,
+    .company,
+    .applied,
+    .edit-user-container,
+    .edit-company-container {
+      margin: 5%;
+    }
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar-links {
+      margin-top: 10px;
+    }
+  
+    .navbar-links li {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .navbar a:hover {
+      color: #ffcc00;
+    }
+  
+    .navbar img {
+      margin-bottom: 10px;
+    }
+  
+  }
+  
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+      background-size: cover;
+    }
+  
+    .login,
+    .registration,
+    .home,
+    .company,
+    .applied,
+    .edit-user-container,
+    .edit-company-container {
+      margin: 10%;
+    }
+  }
+  
+  /* @media only screen and (min-width: 1025px) {
+    .login,
+    .registration,
+    .home,
+    .company,
+    .applied,
+    .edit-user-container,
+    .edit-company-container {
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+  } */
+  

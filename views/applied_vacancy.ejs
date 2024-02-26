@@ -1,0 +1,45 @@
+<!-- applied_vacancy.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Applied Vacancy Page</title>
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('navbar.ejs') %>
+    <div class="applied-head">
+      <h2>Add applied Vacancy</h2>
+      <div class="applied">
+        <form action="/applied_vacancy" method="POST">
+          <label for="company_name">Company Name:</label>
+          <input type="text" name="company_name" required /><br />
+
+          <label for="role">Role:</label>
+          <input type="text" name="role" required /><br />
+
+          <label for="applied_date">Applied Date:</label>
+          <input type="date" name="applied_date" required /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" name="email" required /><br />
+
+          <label for="status">Status:</label>
+          <input type="text" name="status" required /><br />
+
+          <button class="btn1" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!-- user_table.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Table</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+      table, tr, th, td {
+        border: 1px solid black;
+      }
+    </style>
+</head>
+<body>
+    <%- include('navbar.ejs') %>
+    <h2> Applied Vacancy</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Company Name</th>
+            <th>Role</th>
+            <th>Applied Date</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <% users.forEach(user => { %>
+            <tr>
+                <td><%= user._id %></td>
+                <td><%= user.company_name %></td>
+                <td><%= user.role %></td>
+                <td><%= user.applied_date %></td>
+                <td><%= user.email %></td>
+                <td><%= user.status %></td>
+                <td>
+                    <!-- Form for deleting a user -->
+                    <form method="POST" action="/user_table/<%= user._id %>?_method=DELETE">
+                        <button type="submit">Delete</button>
+                    </form>
+                    <a href="/user_table/edit/<%= user._id %>">Edit</a>
+                </td>
+            </tr>
+        <% }); %>
+    </table>
+    <a class="comlink" href="/applied_vacancy">Add new application</a>
+    <a class="comlink" href="/">Go back to home page</a>
+</body>
+</html>
